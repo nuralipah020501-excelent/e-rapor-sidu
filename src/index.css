@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+.font-rapor {
+  font-family: 'Times New Roman', 'Source Serif 4', Georgia, serif;
+}
+
+.font-rapor-sans {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+}
+
+.font-mono-tabular {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Official Paper Sheet Preview Styling */
+.rapor-sheet {
+  background: #ffffff;
+  color: #111827;
+  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.06);
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.rapor-sheet-a4 {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 14mm 15mm;
+}
+
+.rapor-sheet-f4 {
+  width: 215mm;
+  min-height: 330mm;
+  padding: 14mm 15mm;
+}
+
+@media screen and (max-width: 900px) {
+  .rapor-preview-scaler {
+    overflow-x: auto;
+  }
+}
+
+/* Print Media Rules */
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only-container {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+  }
+
+  .rapor-sheet {
+    box-shadow: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    min-height: auto !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  .rapor-page-break {
+    break-after: page;
+    page-break-after: always;
+  }
+
+  .rapor-avoid-break {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .rapor-cover-frame {
+    min-height: 266mm;
+  }
+
+  .rapor-cover-frame-f4 {
+    min-height: 298mm;
+  }
+}

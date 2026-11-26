@@ -1,0 +1,6 @@
+{
+  "name": "e-Rapor PAUD TK Sinar Dunia",
+  "description": "Aplikasi e-Rapor PAUD Fase Fondasi Kurikulum Merdeka untuk TK Sinar Dunia dengan otomatisasi narasi capaian pembelajaran, editor bank narasi, unggah foto kegiatan, penyimpanan JSON, dan cetak PDF A4/F4.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
